@@ -7,7 +7,7 @@ int main()
     //variable declaration
     char quantity;
     int dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputINRtoUSD, userinputUSDtoINR, userinputINRtoJPY, userinputINRtoEuro,
-    userinputOunce, userinputGram, fahrenheitToCelcius, celciusToFahrenheit; 
+    userinputOunce, userinputCarat, userinputGram, fahrenheitToCelcius, celciusToFahrenheit; 
     float USDtoINR, INRtoJPY, INRtoEuro, INRtoUSD, ounceToPounds, gramsToPounds, gramsToCarat, caratToPounds;
     //Menu for users to choose from
     printf("Welcome to Unit Converter!\n");
@@ -143,7 +143,7 @@ int main()
             printf("Please enter the USD amount: \n");
             scanf("%d",&userinputUSDtoINR);
             USDtoINR=userinputUSDtoINR*76.00;
-            printf("INR: %.2f",USDtoINR)
+            printf("INR: %.2f",USDtoINR);
         }
         else
             printf("Please enter correct choice. \n");
