@@ -6,9 +6,9 @@ int main()
 {
     //variable declaration
     char quantity;
-    int dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputUSDtoEuro, userinputUSDtoJPY, userinputUSDtoRMB,
+    int dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputINRtoUSD, userinputUSDtoINR, userinputINRtoJPY, userinputINRtoEuro,
     userinputOunce, userinputGram, fahrenheitToCelcius, celciusToFahrenheit; 
-    float USDtoEURO, USDtoJPY, USDtoRMB, ounceToPounds, gramsToPounds, gramsToCarat, caratToPounds;
+    float USDtoINR, INRtoJPY, INRtoEuro, INRtoUSD, ounceToPounds, gramsToPounds, gramsToCarat, caratToPounds;
     //Menu for users to choose from
     printf("Welcome to Unit Converter!\n");
     printf("Here is a list of quantities to choose from: \n");
@@ -116,34 +116,34 @@ int main()
         printf("Enter 1 for INR to Euro. \n");
         printf("Enter 2 for INR to JPY. \n");
         printf("Enter 3 for INR to USD. \n");
-        printf("Enter 3 for USD to INR. \n");
+        printf("Enter 4 for USD to INR. \n");
         scanf("%d",&currencyChoice);
         if(currencyChoice == 1){
-            printf("Please enter the USD amount: \n");
-            scanf("%d",&userinputUSDtoEuro);
-            USDtoEURO = userinputUSDtoEuro * 0.87;
-            printf("Euro: %.2f",USDtoEURO); // %.2f = rounds the float to only 2 decimal places;
+            printf("Please enter the INR amount: \n");
+            scanf("%d",&userinputINRtoEuro);
+            INRtoEuro = userinputINRtoEuro * 0.012;
+            printf("Euro: %.2f",INRtoEuro); // %.2f = rounds the float to only 2 decimal places;
         }
         else if(currencyChoice == 2)
         {
-            printf("Please enter the USD amount: \n");
-            scanf("%d",&userinputUSDtoJPY);
-            USDtoJPY = userinputUSDtoJPY * 111.09;
-            printf("JPY: %.2f",USDtoJPY);
+            printf("Please enter the INR amount: \n");
+            scanf("%d",&userinputINRtoJPY);
+            INRtoJPY = userinputINRtoJPY *1.61;
+            printf("JPY: %.2f",INRtoJPY);
         }
         else if(currencyChoice == 3) 
         {
-            printf("Please enter the USD amount: \n");
-            scanf("%d",&userinputUSDtoRMB);
-            USDtoRMB = userinputUSDtoRMB * 6.82;
-            printf("RMB: %.2f",USDtoRMB);
+            printf("Please enter the INR amount: \n");
+            scanf("%d",&userinputINRtoUSD);
+            INRtoUSD = userinputINRtoUSD*0.013;
+            printf("USD: %.2f",INRtoUSD);
         }
         else if(currencyChoice==4)
         {
             printf("Please enter the USD amount: \n");
-            scanf("%d",&userinputUSDtoRMB);
-            USDtoRMB = userinputUSDtoRMB * 6.82;
-            printf("RMB: %.2f",USDtoRMB)
+            scanf("%d",&userinputUSDtoINR);
+            USDtoINR=userinputUSDtoINR*76.00;
+            printf("INR: %.2f",USDtoINR)
         }
         else
             printf("Please enter correct choice. \n");
