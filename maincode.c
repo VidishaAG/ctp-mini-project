@@ -6,17 +6,73 @@ int main()
 {
     //variable declaration
     char quantity;
-    int tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputUSDtoEuro, userinputUSDtoJPY, userinputUSDtoRMB,
+    int dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputUSDtoEuro, userinputUSDtoJPY, userinputUSDtoRMB,
     userinputOunce, userinputGram, fahrenheitToCelcius, celciusToFahrenheit; 
     float USDtoEURO, USDtoJPY, USDtoRMB, ounceToPounds, gramsToPounds, gramsToCarat, caratToPounds;
     //Menu for users to choose from
     printf("Welcome to Unit Converter!\n");
     printf("Here is a list of quantities to choose from: \n");
-    printf("Temperature(T),Currency(C),Mass(M),Length(L),Time(T)\n");
+    printf("Temperature(T),Currency(C),Mass(M),Length(L),Time(T), Data(D), Speed(S) \n");
     printf("Please enter the letter you want to convert.\n");
     scanf("%c",&quantity);
 
-    if(quantity == 'T'){
+    if(quantity =='D'){
+        printf("Welcome to Data Converter! \n");
+        printf("Here is a list of conversations to choose from: \n");
+        printf("Enter 1 for Kilobytes to Bytes. \n");
+        printf("Enter 2 for Megabytes to Kilobytes. \n");
+        printf("Enter 3 for Gigabytes to Megabytes. \n");
+        scanf("%d",&dataChoice);
+        if(dataChoice == 1){
+            printf("Please enter the Kilobytes: \n");
+            float Kilobytes;
+            scanf("%f",&Kilobytes);
+            float Bytes =  Kilobytes*1024;
+            printf("Celcius: %.2f",Bytes);
+        }
+        else if(dataChoice == 2){
+            printf("Please enter the Megabytes: \n");
+            float Megabytes;
+            scanf("%f",&Megabytes);
+            float KiloBytes =  Megabytes*1024;
+            printf("Celcius: %.2f",KiloBytes);
+        }
+        else if(dataChoice == 3){
+            printf("Please enter the Gigabytes: \n");
+            float Gigabytes;
+            scanf("%f",&Gigabytes);
+            float MegaBytes =  Gigabytes*1024;
+            printf("Celcius: %.2f",MegaBytes);
+        }
+        else
+            printf("Please enter the correct choice. \n");
+    }
+
+    else if(quantity=='S'){
+        printf("Welcome to Speed Converter! \n");
+        printf("Here is a list of conversations to choose from: \n");
+        printf("Enter 1 for Km/h to m/s. \n");
+        printf("Enter 2 for m/s to Km/h. \n");
+        scanf("%d",&speedChoice);
+        if(dataChoice == 1){
+            printf("Please enter the Km/h: \n");
+            float Kmh;
+            scanf("%f",&Kmh);
+            float ms =  Kmh*0.2778;
+            printf("Celcius: %.2f",ms);
+        }
+        else if(dataChoice == 2){
+            printf("Please enter the m/s: \n");
+            float Ms;
+            scanf("%f",&Ms);
+            float Kmh =  Ms*3.6;
+            printf("Celcius: %.2f",Kmh);
+        }
+        else
+            printf("Please enter the correct choice. \n");
+    }
+
+    else if(quantity == 'T'){
         printf("Welcome to Temperature Converter! \n");
         printf("Here is a list of conversations to choose from: \n");
         printf("Enter 1 for Fahrenheit to Celsius. \n");
