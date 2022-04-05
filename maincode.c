@@ -1,5 +1,3 @@
-//data storage
-//speed
 #include <stdio.h>
 
 int main() 
