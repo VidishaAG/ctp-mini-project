@@ -16,7 +16,7 @@ int main()
     //Menu for users to choose from
     printf("Welcome to Unit Converter!\n");
     printf("Here is a list of quantities to choose from: \n");
-    printf("Temperature(T),Currency(C),Mass(M),Length(L),Time(T), Data(D), Speed(S) \n");
+    printf("Temperature(T),Currency(C),Mass(M),Length(L),Time(t), Data(D), Speed(S) \n");
     printf("Please enter the letter you want to convert.\n");
     scanf("%c",&quantity);
 
