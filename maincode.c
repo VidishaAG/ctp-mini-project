@@ -10,7 +10,7 @@ int main()
 
     //variable declaration
     char quantity;
-    int dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputINRtoUSD, userinputUSDtoINR, userinputINRtoJPY, userinputINRtoEuro,
+    int timeChoice, dataChoice,speedChoice, tempChoice, currencyChoice, massChoice, userinputF, userinputC, userinputINRtoUSD, userinputUSDtoINR, userinputINRtoJPY, userinputINRtoEuro,
             userinputOunce, userinputCarat, userinputGram, fahrenheitToCelcius, celciusToFahrenheit;
     float USDtoINR, INRtoJPY, INRtoEuro, INRtoUSD, ounceToPounds, gramsToPounds, gramsToCarat, caratToPounds;
     //Menu for users to choose from
@@ -261,6 +261,61 @@ int main()
             fprintf(fpointer,"Converted %.2f meters to %.2f foots", meters, foots);
         }
         else
+            printf("Please enter the correct choice. \n");
+    }
+    else if(quantity == 't')
+    {
+        printf("Welcome to Time Converter! \n");
+        printf("Here is a list of conversations to choose from: \n");
+        printf("Enter 1 for seconds to hours \n");
+        printf("Enter 2 for hours to days \n");
+        printf("Enter 3 for seconds to minutes \n");
+        printf("Enter 4 for days to years \n");
+        scanf("%d", &timeChoice);
+        if(timeChoice==1)
+        {
+            printf("Please enter the seconds amount: \n");
+            int second;
+            scanf("%d",&second);
+            float hours=second/0.00027;
+            printf("Hours: %.2f", hours);
+            fprintf(fpointer,"Converted %d seconds to %.2f hours", second, hours);
+        }
+        else if(timeChoice==2)
+        {
+            printf("Please enter the hours amount: \n");
+            int hour;
+            scanf("%d",&hour);
+            float days= hour/24.0;
+            printf("Days: %.2f", days);
+            fprintf(fpointer,"Converted %d hours to %.2f days", hour, days);
+        }
+        else if (timeChoice==3)
+        {
+            printf("Please enter the seconds amount: \n");
+            int second;
+            scanf("%d",&second);
+            float minutes= second/60.0;
+            printf("Minutes: %.2f", minutes);
+            fprintf(fpointer,"Converted %d seconds to %.2f minutes", second, minutes);
+        }
+        else if (timeChoice==4)
+        {
+            printf("Please enter the days amount: \n");
+            int days;
+            scanf("%d",&days);
+            float years= days/365.0;
+            printf("Years: %.2f", years);
+            fprintf(fpointer,"Converted %d days to %.2f years", days, years);
+        }
+        else
+        {
+            printf("Please enter the correct choice. \n");
+        }
+
+    }
+    else
+    {
             printf("Please enter the correct choice. \n");
     }
 
