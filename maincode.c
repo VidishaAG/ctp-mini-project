@@ -201,7 +201,7 @@ int main()
             float inches;
             scanf("%f",&inches);
             float centimeters =  inches * 0.0254;
-            printf("Meters: %.2f",centimeters);
+            printf("Meters: %.2f",Meters);
         }
         else if(lengthChoice == 2){
             printf("Please enter the meters amount: \n");
