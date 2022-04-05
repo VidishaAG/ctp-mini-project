@@ -28,21 +28,21 @@ int main()
             float Kilobytes;
             scanf("%f",&Kilobytes);
             float Bytes =  Kilobytes*1024;
-            printf("Celcius: %.2f",Bytes);
+            printf("Bytes: %.2f",Bytes);
         }
         else if(dataChoice == 2){
             printf("Please enter the Megabytes: \n");
             float Megabytes;
             scanf("%f",&Megabytes);
             float KiloBytes =  Megabytes*1024;
-            printf("Celcius: %.2f",KiloBytes);
+            printf("Kilobytes: %.2f",KiloBytes);
         }
         else if(dataChoice == 3){
             printf("Please enter the Gigabytes: \n");
             float Gigabytes;
             scanf("%f",&Gigabytes);
             float MegaBytes =  Gigabytes*1024;
-            printf("Celcius: %.2f",MegaBytes);
+            printf("Megabytes: %.2f",MegaBytes);
         }
         else
             printf("Please enter the correct choice. \n");
@@ -59,14 +59,14 @@ int main()
             float Kmh;
             scanf("%f",&Kmh);
             float ms =  Kmh*0.2778;
-            printf("Celcius: %.2f",ms);
+            printf("ms: %.2f",ms);
         }
         else if(dataChoice == 2){
             printf("Please enter the m/s: \n");
             float Ms;
             scanf("%f",&Ms);
             float Kmh =  Ms*3.6;
-            printf("Celcius: %.2f",Kmh);
+            printf("Kmh: %.2f",Kmh);
         }
         else
             printf("Please enter the correct choice. \n");
